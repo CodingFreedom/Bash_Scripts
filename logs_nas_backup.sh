@@ -51,7 +51,7 @@ else
                     if [ $? -ne 0 ];
                     then
                        ESITO_PROCEDURA=": KO"
-                       MSG_BODY=$(echo "Compressione dei log (>7 gg) presenti nella cartella /$SOURCE_ROOT/$i/$LOG_FOLDER/ su $HOSTNAME$ESITO_PROCEDURA. Controllare la situazione.")
+                       MSG_BODY=$(echo "Compressione dei log (>$4 gg) presenti nella cartella /$SOURCE_ROOT/$i/$LOG_FOLDER/ su $HOSTNAME$ESITO_PROCEDURA. Controllare la situazione.")
                     else
                     mv *.gz /$NAS_PATH/$i/$LOG_FOLDER/
                         if [ $? -ne 0 ];
